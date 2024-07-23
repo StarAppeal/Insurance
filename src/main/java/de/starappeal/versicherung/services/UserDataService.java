@@ -2,6 +2,7 @@ package de.starappeal.versicherung.services;
 
 import de.starappeal.versicherung.entities.UserData;
 import de.starappeal.versicherung.services.repositories.UserDataRepository;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,15 @@ public class UserDataService {
   public UserData findById(Long id) {
     logger.info("Got request to findById with {}", id);
     return repository.findById(id).orElse(null);
+  }
+
+  public List<UserData> findAll() {
+    logger.info("Got request to findAll");
+    return repository.findAll();
+  }
+
+  public void removeById(Long id) {
+    logger.info("Got request to removeById {}", id);
+    repository.deleteById(id);
   }
 }

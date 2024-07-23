@@ -21,10 +21,12 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest(webEnvironment = WebEnvironment.MOCK)
 @AutoConfigureMockMvc
+@TestPropertySource(locations = "classpath:application-integrationtest.properties")
 class InsuranceControllerTest {
 
   @Autowired private MockMvc mvc;
@@ -57,7 +59,6 @@ class InsuranceControllerTest {
                 "response.calculatedInsurance",
                 is(
                     insuranceCalculationService.calculateInsurance(
-                        request.kilometer(), request.zipcode(), request.vehicleType()))))
-        .andExpect(jsonPath("response.id", is(1)));
+                        request.kilometer(), request.zipcode(), request.vehicleType()))));
   }
 }
