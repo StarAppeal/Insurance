@@ -1,0 +1,8 @@
+ISO_3166_1_ALPHA_2, ISO_3166_1_ALPHA_2_REGION_CODE, REGION1, REGION2, REGION3, REGION4, POSTLEITZAHL, ORT, AREA1, AREA2, LATITUDE, LONGITUDE, ZEITZONE, UTC, SOMMERZEIT, ACTIVE
+"DE", "DE-BW", "Baden-Württemberg", "Freiburg", "Breisgau-Hochschwarzwald", "Bad Krozingen", "79189", "Bad Krozingen", , , 47.91582, 7.69985, "Europe/Berlin", "UTC+1", true, "A"
+"DE", "DE-BW", "Baden-Württemberg", "Freiburg", "Breisgau-Hochschwarzwald", "Bad Krozingen", "79258", "Hartheim", , , 47.93667, 7.62788, "Europe/Berlin", "UTC+1", true, "A"
+"DE", "DE-BW", "Baden-Württemberg", "Freiburg", "Breisgau-Hochschwarzwald", "Breisach am Rhein", "79206", "Breisach am Rhein", , , 48.02819, 7.58273, "Europe/Berlin", "UTC+1", true, "A"
+"DE", "DE-BW", "Baden-Württemberg", "Freiburg", "Breisgau-Hochschwarzwald", "Breisach am Rhein", "79241", "Ihringen", , , 48.04508, 7.64675, "Europe/Berlin", "UTC+1", true, "A"
+"DE", "DE-BW", "Baden-Württemberg", "Freiburg", "Breisgau-Hochschwarzwald", "Breisach am Rhein", "79291", "Merdingen", , , 48.01657, 7.69043, "Europe/Berlin", "UTC+1", true, "A"
+"DE", "DE-BW", "Baden-Württemberg", "Freiburg", "Breisgau-Hochschwarzwald", "Dreisamtal", "79256", "Buchenbach", , , 47.96104, 8.00938, "Europe/Berlin", "UTC+1", true, "A"
+"DE", "DE-BW", "Baden-Württemberg", "Freiburg", "Breisgau-Hochschwarzwald", "Dreisamtal", "79199", "Kirchzarten", , , 47.96348, 7.95273, "Europe/Berlin", "UTC+1", true, "A"
