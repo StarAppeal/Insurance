@@ -46,9 +46,12 @@ public class InsuranceController {
           new UserData(request.kilometer(), request.vehicleType(), request.zipcode(), factor);
 
       userdata = userDataService.save(dataToSave);
-    } catch (IllegalArgumentException | EntityNotFoundException e) {
+    } catch (IllegalArgumentException e) {
       logger.error("There was an error: ", e);
       return ResponseEntity.badRequest().body(new CalculateInsuranceResponse(e));
+    } catch (EntityNotFoundException e){
+      logger.info(e.getMessage());
+      return ResponseEntity.notFound().build();
     }
 
     return ResponseEntity.ok(new CalculateInsuranceResponse(userdata));
