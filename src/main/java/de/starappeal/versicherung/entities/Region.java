@@ -12,7 +12,6 @@ public final class Region {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-
   private String state;
   private String country;
   private String city;

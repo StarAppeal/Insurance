@@ -19,7 +19,7 @@ class CsvServiceTest {
 
   @Test
   void readRows() {
-    List<RegionRow> regions = csvService.readRows();
+    List<RegionRow> regions = csvService.readRows(CsvService.regionParser);
     RegionRow firstRegion = regions.get(0);
 
     assertEquals("Baden-Württemberg", firstRegion.state());

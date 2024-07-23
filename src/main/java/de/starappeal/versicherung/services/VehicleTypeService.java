@@ -23,6 +23,7 @@ public class VehicleTypeService extends AbstractService {
   }
 
   public VehicleType create(VehicleType vehicleType) {
+    logger.info("Got request to create a new VehicleType with {}", vehicleType);
     return repository.save(vehicleType);
   }
 
@@ -44,6 +45,6 @@ public class VehicleTypeService extends AbstractService {
   }
 
   public double getFactor(String vehicleName) {
-    return findByName(vehicleName).factor();
+    return findByName(vehicleName).getFactor();
   }
 }
