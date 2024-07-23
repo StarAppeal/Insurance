@@ -26,7 +26,7 @@ public class VehicleTypeService extends AbstractService {
     return repository.save(vehicleType);
   }
 
-  public VehicleType find(Long id) {
+  public VehicleType findById(Long id) {
     logger.info("Got request to find vehicle type with id: {}", id);
     return repository.findById(id).orElse(null);
   }

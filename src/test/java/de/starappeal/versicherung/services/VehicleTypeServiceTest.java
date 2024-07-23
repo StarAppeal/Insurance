@@ -38,22 +38,22 @@ class VehicleTypeServiceTest {
   }
 
   @Test
-  void find() {
+  void findById() {
     VehicleType vehicleType = new VehicleType(1L, "LKW", 12.1);
     when(repository.findById(eq(1L))).thenReturn(Optional.of(vehicleType));
 
-    assertEquals(vehicleType, service.find(1L));
+    assertEquals(vehicleType, service.findById(1L));
   }
 
   @Test
-  void find_notFound() {
+  void find_ById_notFound() {
     when(repository.findById(eq(1L))).thenReturn(Optional.empty());
 
-    assertNull(service.find(1L));
+    assertNull(service.findById(1L));
   }
 
   @Test
-  void findByName() {
+  void findByIdByName() {
     VehicleType vehicleType = new VehicleType(1L, "LKW", 12.1);
     when(repository.findByName(eq("LKW"))).thenReturn(Optional.of(vehicleType));
 
@@ -61,14 +61,14 @@ class VehicleTypeServiceTest {
   }
 
   @Test
-  void findByName_Exception() {
+  void findByIdByName_Exception() {
     when(repository.findByName(eq("LKW"))).thenReturn(Optional.empty());
 
     assertThrows(EntityNotFoundException.class, () -> service.findByName("LKW"));
   }
 
   @Test
-  void findAll() {
+  void findByIdAll() {
     VehicleType vehicleType1 = new VehicleType(1L, "LKW", 12.1);
     VehicleType vehicleType2 = new VehicleType(2L, "PKW", 0.3d);
 
