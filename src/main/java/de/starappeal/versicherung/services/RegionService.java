@@ -21,6 +21,12 @@ public class RegionService extends AbstractService {
     this.regionRepository = regionRepository;
   }
 
+  public Region save(Region region) {
+    logger.info("Save region: {}", region);
+
+    return regionRepository.save(region);
+  }
+
   public Region findByZipCode(String zipCode) {
     logger.info("Got request to findByZipCode with zipCode={}", zipCode);
     return findWithExceptionHandling(
@@ -37,11 +43,5 @@ public class RegionService extends AbstractService {
   // welp, maybe its the best like it.. its in the definition
   public double getFactor(String zipCode) {
     return findByZipCode(zipCode).getFactor();
-  }
-
-  public void create(Region region) {
-    logger.info("Got request to create a new region {}", region);
-
-    regionRepository.save(region);
   }
 }

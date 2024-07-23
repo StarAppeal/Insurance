@@ -2,7 +2,6 @@ package de.starappeal.versicherung.services;
 
 import de.starappeal.versicherung.entities.VehicleType;
 import de.starappeal.versicherung.services.repositories.VehicleTypeRepository;
-import jakarta.persistence.EntityNotFoundException;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,8 +21,8 @@ public class VehicleTypeService extends AbstractService {
     this.repository = repository;
   }
 
-  public VehicleType create(VehicleType vehicleType) {
-    logger.info("Got request to create a new VehicleType with {}", vehicleType);
+  public VehicleType save(VehicleType vehicleType) {
+    logger.info("Save VehicleType: {}", vehicleType);
     return repository.save(vehicleType);
   }
 

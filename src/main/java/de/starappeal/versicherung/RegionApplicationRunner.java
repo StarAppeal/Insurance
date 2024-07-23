@@ -42,7 +42,7 @@ public class RegionApplicationRunner implements ApplicationRunner {
                       regionRow.location(),
                       factor);
 
-              regionService.create(region);
+              regionService.save(region);
             });
   }
 }

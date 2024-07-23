@@ -32,7 +32,7 @@ public class VehicleTypeApplicationRunner implements ApplicationRunner {
         .forEach(
             vehicleType -> {
               double factor = DoubleUtils.getRandomDouble(0.8, 2.0);
-              vehicleTypeService.create(new VehicleType(null, vehicleType.vehicleName(), factor));
+              vehicleTypeService.save(new VehicleType(null, vehicleType.vehicleName(), factor));
             });
   }
 }
