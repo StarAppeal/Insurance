@@ -23,6 +23,10 @@ public class UserData {
     // for JPA
   }
 
+  public UserData(int kilometer, String vehicleType, String zipCode, double calculatedFactor) {
+    this(null, kilometer, vehicleType, zipCode, calculatedFactor);
+  }
+
   public UserData(
       Long id, int kilometer, String vehicleType, String zipCode, double calculatedFactor) {
     this.id = id;

@@ -7,11 +7,12 @@ import jakarta.persistence.Id;
 import java.util.Objects;
 
 @Entity
-public final class Region {
+public class Region {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
+
   private String state;
   private String country;
   private String city;
